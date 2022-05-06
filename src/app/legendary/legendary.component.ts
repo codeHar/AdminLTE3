@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-legendary',
@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./legendary.component.css']
 })
 export class LegendaryComponent implements OnInit {
+  
+  @ViewChild('areaChart') areaChart;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.areaChartMake()
+  }
+
+  areaChartMake(){
+    console.log(this.areaChart)
   }
 
 }
